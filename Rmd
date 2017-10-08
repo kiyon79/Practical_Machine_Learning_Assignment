@@ -6,42 +6,18 @@ output:
   pdf_document: default
 ---
 
-```{r setup, include=FALSE}
+{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-```
 
 ## Load necessary package
-```{r}
+{r}
 library(ggplot2)
-```
+
 
 The data is set of 60 observations, length of odontoblasts (teeth) in each of 10 guinea pigs at each of three dose levels of Vitamin C (0.5, 1 and 2 mg) with each of two delivery methods (orange juice or ascorbic acid).
 
 ## Load the data
-```{r}
+{r}
 data(ToothGrowth)
 str(ToothGrowth)
 head(ToothGrowth)
-```
-
-## Summary of the data
-```{r}
-summary(ToothGrowth)
-```
-
-## Variables Correction
-```{r}
-ToothGrowth$dose<-as.factor(ToothGrowth$dose)
-```
-
-## Exploratory Data analysis
-I verified the mean of the len variable by supply method.
-```{r}
-MeanSupp = split(ToothGrowth$len, ToothGrowth$supp)
-sapply(MeanSupp, mean)
-```
-
-A graph created.
-```{r}
-ggplot(aes(x=supp, y=len), data=ToothGrowth) + geom_boxplot(aes(fill=supp))+ xlab("Supplement type") +ylab("Tooth length") 
-```
