@@ -5,7 +5,7 @@ date: "2017??? 10??? 8???"
 output: html_document
 ---
 
-Based on the data recorded from several people using Activity Monitors, we will try to construct a macine learning algorithm to predict future outcomes on the test data. I am using Random Forest Modeling, and got over 99% accuracy on my training set of 70% of the total data. All my submitted test cases were succesful.
+Based on the data recorded from several people using Activity Monitors, we will try to construct a macine learning algorithm to predict future outcomes on the test data. I am using Random Forest Modeling, and got over 99% accuracy on my training set of 70% of the total data.
 
 ## Loading and cleaning Data
 ```{r}
